@@ -1,0 +1,60 @@
+@import "variable.scss";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#root{
+    $lgfont: 19px;
+    $lgregualrfont: 18px;
+
+    $mgfont: 15px;
+    $mgregularfont: 14px;
+
+    @import "card.scss";
+    @import "movie.scss";
+    @import "search.scss";
+
+    .back-button{
+        cursor: pointer;
+        width: 40px;
+        display: inline-block;
+    }
+    .page-content{
+        padding: $base-Spacing;
+    }
+    
+    .title {
+        color: $titleColor;
+        font-size: $baseFontSize * 3;
+        margin-bottom: $base-Spacing * 1.5;
+    }
+
+    .float-elm-parent{
+        overflow: hidden;
+    }
+
+    .pull-left{
+        float: left;
+    }
+
+    .pull-right{
+        float: right;
+    }
+
+    .movie-grid{
+        flexGrow: 1;
+
+        // div{
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     width: calc(100% + 16px);
+        //     margin: -8px;
+        // }
+    }
+
+}
+
+@import "small-device.scss";

@@ -1,0 +1,28 @@
+.search-area{
+    height: 40px;
+    margin: -8px;
+    border-bottom: 1px solid $borderColor;
+    margin-bottom: $base-Spacing;
+    padding-left: 40px;
+    position: relative;
+    background-color: white;
+
+    .search-icon{
+        position: absolute;
+        left: 0;
+        top:50%;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        transform: translate3d(0,-50%,0);
+    }
+
+    .search-input{
+        width: 100%;
+        border: 0;
+        height: 100%;
+        padding: 0 $base-Spacing * 1.5;
+        font-size: $lgregualrfont;
+        outline: transparent;
+    }
+}

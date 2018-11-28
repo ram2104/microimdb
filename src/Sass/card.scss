@@ -1,0 +1,106 @@
+$thumbnailWidth: 185px;
+
+.card{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: 278px;
+    position: relative;
+    padding-left: $thumbnailWidth;
+}
+
+.thumbnail-image{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: $thumbnailWidth;
+    cursor: pointer;
+}
+
+.card-content{
+    padding: $base-Spacing $base-Spacing*1.6;
+    height: 100%;
+    position: relative;
+}
+
+.card-title{
+    color: #000;
+    font-size: $lgregualrfont;
+}
+.release-wrapper{
+    font-size: $mgregularfont;
+    display: block;
+    color: $titleColor;
+    margin-top: $base-Spacing;
+    overflow: auto;
+
+    .release-date{
+        float: left;
+    }
+    .rating{
+        float: right;
+    }
+}
+
+.description{
+    margin-top: $base-Spacing * 3;
+    font-size: $mgregularfont;
+    // padding: $base-Spacing*2 $base-Spacing;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    color: #4d4d4d;
+}
+
+.action-area{
+    $actionAreaHeight: 45px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid $borderColor;
+    height: $actionAreaHeight;
+    line-height: $actionAreaHeight;
+    padding: 0 $base-Spacing;
+
+    .more-info-button{
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: $mgfont;
+        cursor: pointer;
+        color: #4d4d4d;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    $thumbnailWidth: 120px;
+    
+    .card{
+        height: initial;
+        padding-left: 0;
+        text-align: center;
+    }
+    .thumbnail-image{
+        width: $thumbnailWidth;
+        cursor: pointer;
+        position: relative;
+    }
+    .card-title{
+        font-size: 16px;
+    }
+    .card-content{
+        padding: $base-Spacing $base-Spacing 0 $base-Spacing;
+        text-align: left;
+    }
+
+    .action-area{
+        position: relative;
+        height: 40px;
+        margin: 0 -8px;
+        line-height: 40px;
+    }
+    
+    .release-wrapper{
+        margin-bottom: $base-Spacing;
+    }
+}
